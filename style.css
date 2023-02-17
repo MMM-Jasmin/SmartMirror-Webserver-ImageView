@@ -1,5 +1,33 @@
-.region.middle.center {
-    /*top: 50%;*/
-    z-index: 0;
+.wrap {
+  width: 1080px;
+  height: 1920px;
+  overflow: hidden;
+}
+
+iframe {
+  width: 1080px !important;
+  height: 1920px !important;
+  /*-webkit-transform: scale(1.3);
+  transform: scale(1.3);
+  -webkit-transform-origin: 0 0;
+  transform-origin: 0 0;*/
+}
+
+.frame {
+  width: 100%;
+  height: 100%;
+  border: 0;
+  transform: scale(calc(1920/1280));
+  transform-origin: 0 0; 
+  /*-ms-transform: scale(0.25);
+  -moz-transform: scale(0.25);
+  -o-transform: scale(0.25);
+  -webkit-transform: scale(0.25);
   
-  }
+
+  -ms-transform-origin: 0 0;
+  -moz-transform-origin: 0 0;
+  -o-transform-origin: 0 0;
+  -webkit-transform-origin: 0 0;
+  transform-origin: 0 0; */
+}

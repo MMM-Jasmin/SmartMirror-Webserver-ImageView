@@ -35,13 +35,16 @@
 
 		Log.info('REFRESH DOM:  ' + this.name);
 		var wrapper = document.createElement("div");
-		wrapper.className = "video";
+		wrapper.className = "wrap";
 
-        wrapper.innerHTML = "<iframe width=\"" + this.config.image_width + "\" height=\"" + this.config.image_height + "\" src=\"http://0.0.0.0:"+ this.config.port +"\" frameborder=\"0\" allowfullscreen></iframe>";
+        wrapper.innerHTML = "<iframe class=\"frame\" width=\"1080\" height=\"1920\" src=\"http://0.0.0.0:"+ this.config.port +"/bgr\" frameborder=\"0\" allowfullscreen></iframe>";
         //wrapper.innerHTML = "<iframe width=\"" + this.config.width +"\" height=\"" + this.config.height + "\" src=\"http://0.0.0.0:5000/video_feed\" frameborder=\"0\" allowfullscreen></iframe>";
 
-        wrapper.style.width="1080px";
-        wrapper.style.height="1920px";
+		//let ifElem = wrapper.getElementById("myframe");
+		//ifElem.contentWindow.document.documentElement.style.width="1080px";
+        //wrapper.style.width="1080";
+        //wrapper.style.height="1920px";
+		//wrapper.style.width="100%"
 		return wrapper;
 
 	},
@@ -69,5 +72,4 @@
     getStyles: function () {
         return ['style.css'];
     }
-
 });
