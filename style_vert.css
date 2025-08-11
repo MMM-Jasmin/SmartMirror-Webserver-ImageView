@@ -1,16 +1,12 @@
 .wrap {
-  /*width: 1080px;
-  height: 1920px;*/
-  width: 1920px;
-  height: 1080px;
+  width: 1080px;
+  height: 1920px;
   overflow: hidden;
 }
 
 iframe {
-  /*width: 1080px !important;
-  height: 1920px !important;*/
-  width: 1920px !important;
-  height: 1080px !important;
+  width: 1080px !important;
+  height: 1920px !important;
   
   /*-webkit-transform: scale(1.3);
   transform: scale(1.3);

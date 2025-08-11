@@ -17,7 +17,7 @@
 		forgroundFPS: 30,
 		backgroundFPS: 5,
 		ai_art_mirror: true,	
-		debug: false	
+		debug: false
 	},
 
 	start: function() {
@@ -37,7 +37,7 @@
 		var wrapper = document.createElement("div");
 		wrapper.className = "wrap";
 
-        wrapper.innerHTML = "<iframe class=\"frame\" width=\"1080\" height=\"1920\" src=\"http://0.0.0.0:"+ this.config.port +"/bgr\" frameborder=\"0\" allowfullscreen></iframe>";
+        wrapper.innerHTML = "<iframe class=\"frame\" width=\""+this.config.image_width +"\" height=\""+this.config.image_height+"\" src=\"http://0.0.0.0:"+ this.config.port +"/bgr\" frameborder=\"0\" allowfullscreen></iframe>";
         //wrapper.innerHTML = "<iframe width=\"" + this.config.width +"\" height=\"" + this.config.height + "\" src=\"http://0.0.0.0:5000/video_feed\" frameborder=\"0\" allowfullscreen></iframe>";
 
 		//let ifElem = wrapper.getElementById("myframe");
@@ -70,6 +70,10 @@
 
 
     getStyles: function () {
-        return ['style.css'];
+		if (this.config.image_width > this.config.image_height) {
+			return ['style.css'];
+		}else {
+			return ['style_vert.css'];	
+		}
     }
 });
